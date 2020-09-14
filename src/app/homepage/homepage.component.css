@@ -1,0 +1,80 @@
+
+h3{
+    text-align: center;
+}
+
+
+
+  .cell
+  {
+    padding:0px;
+    bottom: 0; 
+    
+  }
+  
+  .col1
+  {
+  
+  margin-top:40px;
+  margin-left:180px;
+  
+  }
+  i1{
+    height: 400px;
+    width: 600px;
+  }
+
+  .cell
+  {
+    padding:0px;
+  }
+  
+  .col1
+  {
+  
+  margin-top:40px;
+  margin-left:180px;
+  
+  }
+
+  .grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-gap: 50px;
+    padding: 20px;
+        grid-template-columns: 250px 250px 250px 250px;
+        
+        align-items: center;
+        
+       
+    padding: 10px;
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+    
+  border: black 1px solid;
+  }
+
+  .i1
+  {
+    margin-right: 60px;
+    
+    height:180px;
+    width: 180px;
+  }
+  button
+  {
+    
+    display:inline-block;
+  }
+
+
+ 
+
+  

@@ -1,0 +1,23 @@
+
+img{
+    height:300px;
+    width:250px;
+    margin-right: 100px;
+    
+      
+    
+
+}
+
+
+.zoom {
+  padding: 50px;
+  
+  transition: transform .2s; /* Animation */
+  
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5); 
+}
