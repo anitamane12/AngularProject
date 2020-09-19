@@ -28,7 +28,7 @@ ul {
     float: left;
   }
   
-  li a {
+  li a,select{
     display: block;
     color: white;
     text-align: center;
@@ -40,8 +40,5 @@ ul {
     background-color: #111;
   }
 
-
-
- 
 
  

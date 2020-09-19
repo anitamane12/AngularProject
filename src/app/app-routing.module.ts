@@ -8,17 +8,21 @@ import {AdmindashboardComponent} from './admindashboard/admindashboard.component
 import { AuthguardGuard } from './authguard.guard';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import { ProductMangoComponent } from './product-mango/product-mango.component';
+import {AdminloginComponent} from './adminlogin/adminlogin.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 
 const routes: Routes = [
-  { path: "", component: LoginComponent },
+  { path: "", component: HomepageComponent },
 { path: "login", component: LoginComponent },
 { path: "home", component: HomepageComponent },
 { path: "registration", component: RegisterComponent },
 { path: "dashboard", component: AdmindashboardComponent,canActivate: [AuthguardGuard] },
-{ path: "dashboard1", component: AdminDashboardComponent },
+{ path: "dashboard1", component: AdminDashboardComponent},
 { path: "mango",component:ProductMangoComponent},
+{ path: "adminlogin" ,component:AdminloginComponent},
+{path: "addproduct" ,component:AddProductComponent},
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {ProductService} from './product.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,9 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { LoginComponent } from './login/login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ProductMangoComponent } from './product-mango/product-mango.component';
+import { ProductItemComponent } from './product-list/product-item/product-item.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { ProductMangoComponent } from './product-mango/product-mango.component';
     AdmindashboardComponent,
     LoginComponent,
     AdminDashboardComponent,
-    ProductMangoComponent
+    ProductMangoComponent,
+    ProductItemComponent,
+    AdminloginComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,7 @@ import { ProductMangoComponent } from './product-mango/product-mango.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

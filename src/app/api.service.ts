@@ -3,6 +3,8 @@ import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Users } from './users';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -46,4 +48,13 @@ baseUrl:string = "http://localhost/BeGreen/php";
     }
     return false;
     }
+
+    saveData(data)
+    {
+      return this.httpClient.post(this.baseUrl + '/add_product.php',data,{responseType:'text'})
+      .pipe(map(Product => {
+      return Product;
+      }));
+    }
 }
+

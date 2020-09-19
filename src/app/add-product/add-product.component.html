@@ -1,0 +1,90 @@
+<h1 class="text-center">Add Product</h1>>
+<div class="jumbotron">
+    <div class="table table-bordered">
+<form [formGroup]="form" (ngSubmit)="addproduct()">
+<div class="row">
+    <div class="col-md-3"></div>
+    
+    <div class="col-md-3">
+        <div class="form-group">
+                <label><h3>Name</h3></label>
+                <input name="name" type="text" class="form-control" formControlName="name">
+            </div>
+        </div>
+        <br>
+
+
+        <div class="col-md-3">
+            <div class="form-group">
+                    <label for=""><h3>Price</h3></label>
+                    <input name="price" type="text" class="form-control"  formControlName="price">
+                </div>
+            </div>
+            
+
+            <div class="col-md-3">
+                <div class="form-group">
+                        <label for=""><h3>Discount</h3></label>
+                        <input name="discount" type="text" class="form-control"  formControlName="discount">
+                    </div>
+                </div>   
+            </div>
+     <br><br><br><br>
+        
+            <div class="row">
+                <div class="col-md-3"></div>
+                
+                <div class="col-md-3">
+                    <div class="form-group">
+                            <label for=""><h3>PriceWithDiscount</h3></label>
+                            <input name="withdiscount" type="text" class="form-control"  formControlName="withdiscount">
+                        </div>
+                    </div>   
+    
+                <div class="col-md-3">
+                    <div class="form-group">
+                            <label for=""><h3>Quantity</h3></label>
+                            <input name="quantity" type="number" class="form-control" formControlName="quantity"/>
+                        </div>
+                    </div>   
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                                <label for=""><h3>Add Image</h3></label>
+                                <input  type="file" (change)="onFileSelect($event)" name="image" class="form-control"/><br>
+                                <!--<img [src]="" height="200" width="200">-->
+                            </div>
+                        </div>   
+            </div>
+            <br><br><br><br>
+            <div class="row">
+                <div class="col-md-3"></div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                    <label for=""><h3>Ratings</h3></label>
+                                    <input name="ratings" type="number" class="form-control"  formControlName="ratings">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                        <label for=""><h3>Description</h3></label>
+                                        <textarea name="description" class="form-control"  formControlName="description" rows="4"></textarea>
+                                    </div>
+                                </div>
+
+            </div>
+
+            
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                  
+                <div class="row">
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-success"><h3>Add</h3></button>&nbsp;&nbsp;&nbsp;
+                            <a routerLink="/dashboard1" class="btn btn-danger"><h3>Cancel</h3> </a>
+                        </div>
+                    </div>
+                </form>
+</div>
+</div>

@@ -1,7 +1,9 @@
 <div>
   <img src="../assets/logo1.jpg">
   <p style="color:green;font-size:40px; font-style: oblique;">Be Green</p> 
-  
+ 
+   <!-- <a class="nav-link " *ngIf="loginbtn" routerLink="/adminlogin" routerLinkActive="active"><h3>Admin</h3></a>-->
+    <button type="button" class="btn btn-link"><a href="/adminlogin"><h3>Admin-Login </h3></a></button>
   </div>
 
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark"  >
@@ -9,32 +11,44 @@
   
   <div class="container "id="navbarsExample">
   <ul class="navbar-nav mr-uto">
+  <li class="nav-item ">
+  <a class="nav-link " *ngIf="loginbtn" routerLink="/home" routerLinkActive="active"><h3>Home</h3></a>
+  </li>
+ 
+  
+    
+     <li class="nav-item ">
+       <a class="nav-link" *ngIf="loginbtn" routerLink="" routerLinkActive="active"><h3>Plants</h3></a>
+      </li>
+
+     
+        
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="logoutbtn" routerLink="/home" routerLinkActive="active"><h3>Home</h3></a>
+          </li>
+        
   <li class="nav-item">
-  <a class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active"><h3>Home</h3></a>
+  <a class="nav-link" *ngIf="logoutbtn" routerLink="/dashboard" routerLinkActive="active"><h3>Category</h3></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active"><h3>AboutUs</h3></a>
+    <a class="nav-link" *ngIf="logoutbtn" routerLink="/dashboard" routerLinkActive="active"><h3>Order</h3></a>
     </li>
-    
-      <li class="nav-item dropdown">
-        <a class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active"><h3>Plants</h3></a>
 
-        
-        
+    <li class="nav-item">
+      <a class="nav-link" *ngIf="logoutbtn" routerLink="/dashboard" routerLinkActive="active"><h3>User</h3></a>
+      </li>
 
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="logoutbtn" routerLink="/dashboard1" routerLinkActive="active"><h3>Product</h3></a>
         </li>
 
-  <li class="nav-item">
-  <a class="nav-link" *ngIf="logoutbtn" routerLink="/dashboard" routerLinkActive="active"><h3>User Dashboard</h3></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" *ngIf="logoutbtn" routerLink="/dashboard1" routerLinkActive="active"><h3>Admin Dashboard</h3></a>
-    </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="logoutbtn" routerLink="/dashboard1" routerLinkActive="active"><h3>Order</h3></a>
+          </li>
+
   </ul>
   <ul class="nav navbar-nav navbar-right">
-    <li class="nav-item">
-      <button type="button" *ngIf="logoutbtn"  (click)="logout()"><h3>logout</h3></button>
-      </li>
+    
     <li class="nav-item">
       <a class="nav-link " *ngIf="loginbtn" routerLink="/login" routerLinkActive="active"><h3>Login</h3></a>
       </li>
@@ -42,7 +56,13 @@
       <li class="nav-item">
       <a class="nav-link" *ngIf="loginbtn" routerLink="/registration" routerLinkActive="active"><h3>SignUp</h3></a>
       </li>
+       
+      <li class="nav-item">
+        <button type="button" *ngIf="logoutbtn"  routerLink="/home" (click)="logout()"><h3>logout</h3></button>
+        </li>
+        
   </ul>
   </div>
   </nav>
   <router-outlet></router-outlet>
+  
